@@ -1,6 +1,6 @@
 # EspScript
 
-EspScript is a in-place command expander
+EspScript is an in-place command expander
 
 ## How it works
 
@@ -8,7 +8,7 @@ EspScript replaces a command with the result of its execution
 
 For example, `!r '123' 32;` -> `123123123123123`
 
-**Note:** EspScript relies on [Espanso](https://espanso.org/) text expansion engine to recognize commands, so it must be installed on your computer in order for EspScript to work properly
+**Note:** EspScript relies on [Espanso](https://espanso.org/) text expansion engine to recognize commands, so it must be installed on your computer in order for EspScript to work
 
 ## Installation
 
@@ -28,7 +28,7 @@ Then copy `espscript.yml` file to the Espanso `matches` directory
 
 Make sure to replace `[python]` with a path to the python interpretor and `[espscript-main]` with a path to the `src/main.py` file
 
-**Note:** Use python interpretor from the virtual environment
+**Note:** Using python interpretor other than the one from the virtual environment might lead to an error
 
 ## Syntax
 
@@ -36,8 +36,8 @@ Every script begins with `!` followed by a command name, a list of arguments and
 
 Arguments are separated with spaces, strings containing spaces must be surrounded with single quotes
 
-Double quotes must be escaped with `\`
+For example, here is a command for generating a list of 10 random numbers from 0 to 64
 
 ```espscript
-!cmd-name 'string \"arg\"' arg;
+!rd int 0-64 10;
 ```
