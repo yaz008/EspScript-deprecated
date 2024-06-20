@@ -11,9 +11,9 @@ from typing import Callable
 config = f'{'\\'.join(path[0].split(sep='\\')[:-1])}\\config.json'
 with open(file=config, mode='r', encoding='UTF-8') as ConfigFile:
     lookup: dict[str, str] = load(ConfigFile, SafeLoader)
-short__name, *args = split(argv[1])
+short_name, *args = split(argv[1])
 
-name: str = lookup[short__name]
+name: str = lookup[short_name]
 module: ModuleType = import_module(f'scripts.{name}')
 func: Callable[..., str] = getattr(module, name)
 result: str = func(*args)
