@@ -2,5 +2,6 @@
     "r": "repeat",
     "e": "evaluate",
     "tb": "table",
-    "rd": "rand"
+    "rd": "rand",
+    "rp": "replace"
 }
