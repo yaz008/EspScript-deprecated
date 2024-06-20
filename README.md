@@ -34,10 +34,16 @@ Make sure to replace `[python]` with a path to the python interpretor and `[esps
 
 Every script begins with `!` followed by a command name, a list of arguments and `;` at the end
 
-Arguments are separated with spaces, strings containing spaces must be surrounded with single quotes
+Arguments are separated with spaces, strings containing spaces must be surrounded by single quotes
 
 For example, here is a command for generating a list of 10 random numbers from 0 to 64
 
 ```espscript
 !rd int 0-64 10;
 ```
+
+## Customization
+
+The `config.json` file contains `key: value` pairs where key represents a trigger (command name)
+
+Simply change it to more appropriate one and save the file, changes will apply automatically
