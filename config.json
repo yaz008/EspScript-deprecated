@@ -1,5 +1,6 @@
 {
     "r": "repeat",
     "e": "evaluate",
-    "tb": "table"
+    "tb": "table",
+    "rd": "rand"
 }
