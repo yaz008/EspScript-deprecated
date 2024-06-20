@@ -1,0 +1,8 @@
+matches:
+  - regex: "!(?P<cmd>.+);"
+    replace: "{{result}}"
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: "[python] [espscript-main] \"$env:ESPANSO_CMD\""
