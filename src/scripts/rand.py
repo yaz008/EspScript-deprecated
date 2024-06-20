@@ -1,4 +1,5 @@
-from random import randint, choice, choices
+from random import randint, choice, choices, uniform, normalvariate
+from typing import Callable
 
 AMINO_ACIDS: list[str] = [
     'Glycine',
@@ -28,22 +29,26 @@ def randon_string(letters: str, length: str, samples: str | None = None) -> str:
         return [''.join(choices(letters, k=length)) for _ in range(int(samples))]
     return ''.join(choices(letters, k=int(length)))
 
-def random_int(*args: str) -> str:
+def random_number(randomizer: Callable, default_range: tuple, *args: str) -> str:
     match len(args):
         case 0:
-            return randint(0, 32767)
+            return randomizer(*default_range)
         case 1:
             if '-' in args[0]:
-                return randint(*map(int, args[0].split(sep='-')))
-            return [randint(0, 32767) for _ in range(int(args[0]))]
+                return randomizer(*map(eval, args[0].split(sep='-')))
+            return [randomizer(*default_range) for _ in range(int(args[0]))]
         case 2:
-            return [randint(*map(int, args[0].split(sep='-'))) for _ in range(int(args[1]))]
+            return [randomizer(*map(eval, args[0].split(sep='-'))) for _ in range(int(args[1]))]
 
 def rand(*args: str) -> str:
     match args:
-        # Integers:
+        # Numbers:
         case ['int', *args]:
-            return random_int(*args)
+            return random_number(randint, (0, 32767), *args)
+        case ['uniform', *args]:
+            return random_number(uniform, (0.0, 1.0), *args)
+        case ['norm', *args]:
+            return random_number(normalvariate, (0.0, 1.0), *args)
         
         # Strings:
         case ['rna', *args]:
