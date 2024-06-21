@@ -3,5 +3,6 @@
     "e": "evaluate",
     "tb": "table",
     "rd": "rand",
-    "rp": "replace"
+    "rp": "replace",
+    "n": "name"
 }

@@ -24,7 +24,7 @@ AMINO_ACIDS: list[str] = [
     'Glutamine'
 ]
         
-def randon_string(letters: str, length: str, samples: str | None = None) -> str:
+def random_string(letters: str, length: str, samples: str | None = None) -> str:
     if samples:
         return [''.join(choices(letters, k=length)) for _ in range(int(samples))]
     return ''.join(choices(letters, k=int(length)))
@@ -52,12 +52,12 @@ def rand(*args: str) -> str:
         
         # Strings:
         case ['rna', *args]:
-            return randon_string('AUGC', *args)
+            return random_string('AUGC', *args)
         case ['dna', *args]:
-            return randon_string('ATGC', *args)
+            return random_string('ATGC', *args)
         case ['amino', *args]:
             if len(args) == 0:
                 return choice(AMINO_ACIDS)
             return choices(AMINO_ACIDS, k=int(args[0]))
-        case ['prot', 'protein', *args]:
-            return randon_string('ACDEFGHIKLMNPQRSTVWY', *args)
+        case ['prot' | 'protein', *args]:
+            return random_string('ACDEFGHIKLMNPQRSTVWY', *args)
