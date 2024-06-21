@@ -4,5 +4,6 @@
     "tb": "table",
     "rd": "rand",
     "rp": "replace",
-    "n": "name"
+    "n": "name",
+    "c": "count"
 }

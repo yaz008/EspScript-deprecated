@@ -35,10 +35,12 @@ def random_number(randomizer: Callable, default_range: tuple, *args: str) -> str
             return randomizer(*default_range)
         case 1:
             if '-' in args[0]:
-                return randomizer(*map(eval, args[0].split(sep='-')))
+                return randomizer(*map(eval, args[0].split(sep='-', maxsplit=1)))
             return [randomizer(*default_range) for _ in range(int(args[0]))]
         case 2:
-            return [randomizer(*map(eval, args[0].split(sep='-'))) for _ in range(int(args[1]))]
+            return [randomizer(*map(eval,
+                                    args[0].split(sep='-', maxsplit=1))) 
+                    for _ in range(int(args[1]))]
 
 def rand(*args: str) -> str:
     match args:
