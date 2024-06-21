@@ -49,3 +49,5 @@ def count(*args: str):
             return len(findall(pattern=r'[0-9]+', string=clip))
         case ['m']:
             return len(findall(pattern=r'[a-zA-Z\\.]+@[a-z]+.[a-z]+', string=clip))
+        
+    return len(findall(pattern=args[0], string=clip))
