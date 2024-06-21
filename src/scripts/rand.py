@@ -26,7 +26,7 @@ AMINO_ACIDS: list[str] = [
         
 def random_string(letters: str, length: str, samples: str | None = None) -> str:
     if samples:
-        return [''.join(choices(letters, k=length)) for _ in range(int(samples))]
+        return [''.join(choices(letters, k=int(length))) for _ in range(int(samples))]
     return ''.join(choices(letters, k=int(length)))
 
 def random_number(randomizer: Callable, default_range: tuple, *args: str) -> str:
