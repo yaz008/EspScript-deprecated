@@ -1,3 +1,4 @@
 {
-    "e": "scripts.echo::echo"
+    "e": "scripts.echo::echo",
+    "r": "scripts.string.repeat::repeat"
 }
