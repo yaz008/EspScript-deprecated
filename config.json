@@ -10,5 +10,6 @@
     "o": "scripts.cast.object::cast_to_object",
     "str": "scripts.cast.type_conversion::cast_to_string",
     "int": "scripts.cast.type_conversion::cast_to_int",
-    "fl": "scripts.cast.type_conversion::cast_to_float"
+    "fl": "scripts.cast.type_conversion::cast_to_float",
+    "run": "scripts.run.py::run_python_code"
 }
