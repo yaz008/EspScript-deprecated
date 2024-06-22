@@ -3,8 +3,9 @@
     "r": "scripts.string.repeat::repeat",
     "f": "scripts.string.regex.func::find",
     "c": "scripts.string.regex.func::count",
-    "rp": "scripts.string.regex.func::substitute",
+    "s": "scripts.string.regex.func::substitute",
     "l": "scripts.string.properties::length",
+    "rp": "scripts.string.replace::replace",
     "avg": "scripts.math.stats::average",
     "o": "scripts.cast.object::cast_to_object"
 }
