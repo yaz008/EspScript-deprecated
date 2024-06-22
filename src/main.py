@@ -1,7 +1,7 @@
 from sys import argv
 from win32clipboard import OpenClipboard
-from frontend import Chunk, parse
-from interpreter import execute
+from runtime.parser import Chunk, parse
+from runtime.interpreter import execute
 
 OpenClipboard()
 chunks: list[Chunk] = parse(argv[1])
