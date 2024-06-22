@@ -1,4 +1,5 @@
 from win32clipboard import GetClipboardData
+from functools import reduce
 from runtime.parser.parse import Chunk
 from runtime.interpreter.load import load_by_name
 
@@ -14,5 +15,7 @@ def execute(chunks: list[Chunk]) -> None:
                 result = func(result, *chunk.args)
             case '?':
                 result = list(map(func, result))
+            case '&':
+                result = reduce(func(*chunk.args), result)
 
     return list(result) if isinstance(result, map) else result

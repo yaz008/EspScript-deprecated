@@ -9,7 +9,7 @@ def parse(command: str) -> list[Chunk]:
     in_quotes: bool = False
 
     for symbol in command:
-        if symbol in ('|', '?') and not in_quotes:
+        if symbol in ('|', '?', '&') and not in_quotes:
             chunks.append(Chunk(prev_link, *split(current_chunk)))
             prev_link = symbol
             current_chunk = ''
