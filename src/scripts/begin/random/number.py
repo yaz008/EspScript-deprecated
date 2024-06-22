@@ -13,11 +13,11 @@ def rand_num(randomizer: Callable[..., Any],
     return [randomizer(*map(eval,args[0].split(sep=':', maxsplit=1)))
                             for _ in range(int(args[1]))]
 
-def rand(stdin: str, *args: str) -> Any:
-    match args:
-        case ['int', *args]:
+def random_number(randomizer: str, *args: str) -> Any:
+    match randomizer:
+        case 'int':
             return rand_num(randint, (0, 32767), *args)
-        case ['u', *args]:
+        case 'u':
             return rand_num(uniform, (0.0, 1.0), *args)
-        case ['norm', *args]:
+        case 'norm':
             return rand_num(normalvariate, (0.0, 1.0), *args)

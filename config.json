@@ -1,6 +1,6 @@
 {
-    "e": "scripts.begin.echo::echo",
-    "rd": "scripts.begin.random.number::rand",
+    "e": "scripts.begin.func::echo",
+    "rd": "scripts.begin.func::rand",
     "r": "scripts.string.repeat::repeat",
     "f": "scripts.string.regex.func::find",
     "c": "scripts.string.regex.func::count",
