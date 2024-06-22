@@ -4,7 +4,7 @@ from yaml import load, SafeLoader
 from types import ModuleType
 from typing import Callable, Any
 
-config = f'{'\\'.join(path[0].split(sep='\\')[:-1])}\\config.json'
+config: str = f'{'\\'.join(path[0].split(sep='\\')[:-1])}\\config.json'
 with open(file=config, mode='r', encoding='UTF-8') as ConfigFile:
     lookup: dict[str, str] = load(ConfigFile, SafeLoader)
 
