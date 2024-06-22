@@ -1,7 +1,7 @@
 {
     "e": "scripts.echo::echo",
     "r": "scripts.string.repeat::repeat",
-    "f": "scripts.string.regex::find",
+    "f": "scripts.string.regex.func::find",
     "l": "scripts.string.properties::length",
     "avg": "scripts.math.stats::average",
     "o": "scripts.cast.object::cast_to_object"
