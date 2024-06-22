@@ -1,3 +1,5 @@
+<img src="assets/logo.jpg" alt="Logo" style="height: 400px;"/>
+
 # EspScript
 
 EspScript is an in-place command expander
