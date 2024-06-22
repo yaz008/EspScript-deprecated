@@ -1,2 +1,4 @@
-def length(stdin: str | list[str], *args) -> int:
+from typing import Sized
+
+def length(stdin: Sized, *args) -> int:
     return len(stdin)

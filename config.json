@@ -2,5 +2,6 @@
     "e": "scripts.echo::echo",
     "r": "scripts.string.repeat::repeat",
     "f": "scripts.string.regex::find",
-    "l": "scripts.string.properties::length"
+    "l": "scripts.string.properties::length",
+    "avg": "scripts.math.stats::average"
 }
