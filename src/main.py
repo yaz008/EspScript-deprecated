@@ -5,5 +5,8 @@ from runtime.interpreter import execute
 
 OpenClipboard()
 chunks: list[Chunk] = parse(argv[1])
-result: str = str(execute(chunks))
-print(result)
+try:
+    result: str = str(execute(chunks))
+    print(result)
+except Exception:
+    print('<Error>')
