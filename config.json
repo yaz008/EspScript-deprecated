@@ -1,10 +1,10 @@
 {
-    "r": "repeat",
-    "e": "evaluate",
-    "tb": "table",
-    "rd": "rand",
-    "rp": "replace",
-    "n": "name",
-    "c": "count",
-    "f": "find"
+    "r": "scripts.repeat::repeat",
+    "e": "scripts.evaluate::evaluate",
+    "tb": "scripts.table::table",
+    "rd": "scripts.rand::rand",
+    "rp": "scripts.replace::replace",
+    "n": "scripts.name::name",
+    "c": "scripts.count::count",
+    "f": "scripts.find::find"
 }

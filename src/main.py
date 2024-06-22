@@ -1,20 +1,8 @@
-# Imports:
-from importlib import import_module
-from sys import argv, path
-from shlex import split
-from yaml import load, SafeLoader
+from sys import argv
+from win32clipboard import OpenClipboard
+from frontend import Chunk, parse
+from interpreter import execute
 
-# Typing:
-from types import ModuleType
-from typing import Callable
-
-config = f'{'\\'.join(path[0].split(sep='\\')[:-1])}\\config.json'
-with open(file=config, mode='r', encoding='UTF-8') as ConfigFile:
-    lookup: dict[str, str] = load(ConfigFile, SafeLoader)
-short_name, *args = split(argv[1])
-
-name: str = lookup[short_name]
-module: ModuleType = import_module(f'scripts.{name}')
-func: Callable[..., str] = getattr(module, name)
-result: str = func(*args)
-print(result)
+OpenClipboard()
+chunks: list[Chunk] = parse(argv[1])
+print(execute(chunks))
