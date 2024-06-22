@@ -1,0 +1,1 @@
+LINKS: list[str] = ['|', '?']
