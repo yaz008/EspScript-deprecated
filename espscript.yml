@@ -6,3 +6,4 @@ matches:
         type: shell
         params:
           cmd: "[python] [espscript-main] \"$env:ESPANSO_CMD\""
+          shell: powershell
