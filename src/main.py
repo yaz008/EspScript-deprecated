@@ -5,4 +5,5 @@ from interpreter import execute
 
 OpenClipboard()
 chunks: list[Chunk] = parse(argv[1])
-print(execute(chunks))
+result: str = str(execute(chunks))
+print(result)
