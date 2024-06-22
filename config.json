@@ -3,5 +3,6 @@
     "r": "scripts.string.repeat::repeat",
     "f": "scripts.string.regex::find",
     "l": "scripts.string.properties::length",
-    "avg": "scripts.math.stats::average"
+    "avg": "scripts.math.stats::average",
+    "o": "scripts.cast.object::cast_to_object"
 }

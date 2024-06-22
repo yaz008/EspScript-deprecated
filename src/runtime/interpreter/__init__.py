@@ -1,1 +1,1 @@
-from interpreter.execute import execute
+from runtime.interpreter.execute import execute

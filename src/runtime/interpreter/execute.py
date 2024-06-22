@@ -1,6 +1,6 @@
 from win32clipboard import GetClipboardData
-from parser.parse import Chunk
-from interpreter.load import load_by_name
+from runtime.parser.parse import Chunk
+from runtime.interpreter.load import load_by_name
 
 from typing import Callable, Any
 

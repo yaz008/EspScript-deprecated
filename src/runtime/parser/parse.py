@@ -1,6 +1,6 @@
 # Imports:
 from shlex import split
-from parser.types import Chunk
+from runtime.parser.types import Chunk
 
 def parse(command: str) -> list[Chunk]:
     chunks: list[Chunk] = []
