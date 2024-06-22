@@ -9,3 +9,7 @@ with open(file=regex, mode='r', encoding='UTF-8') as RegexFile:
 def find(stdin: str, *args: str) -> list[str]:
     pattern: str = lookup[args[0]]
     return findall(pattern=pattern, string=stdin)
+
+def count(stdin: str, *args: str) -> list[str]:
+    pattern: str = lookup[args[0]]
+    return count(findall(pattern=pattern, string=stdin))
