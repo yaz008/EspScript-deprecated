@@ -1,4 +1,4 @@
-from re import findall
+from re import findall, sub
 from yaml import load, SafeLoader
 from sys import path
 
@@ -10,6 +10,10 @@ def find(stdin: str, *args: str) -> list[str]:
     pattern: str = lookup[args[0]]
     return findall(pattern=pattern, string=stdin)
 
-def count(stdin: str, *args: str) -> list[str]:
+def count(stdin: str, *args: str) -> int:
     pattern: str = lookup[args[0]]
-    return count(findall(pattern=pattern, string=stdin))
+    return len(findall(pattern=pattern, string=stdin))
+
+def substitute(stdin: str, *args: str) -> str:
+    pattern: str = lookup[args[0]]
+    return sub(pattern=pattern, repl=args[1], string=stdin)
