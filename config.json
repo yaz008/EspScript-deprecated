@@ -7,6 +7,8 @@
     "l": "scripts.string.properties::length",
     "rp": "scripts.string.replace::replace",
     "avg": "scripts.math.stats::average",
+    "rc": "scripts.math.choose::random_choice",
+    "rcs": "scripts.math.choose::random_choices",
     "o": "scripts.cast.object::cast_to_object",
     "str": "scripts.cast.type_conversion::cast_to_string",
     "int": "scripts.cast.type_conversion::cast_to_int",
