@@ -1,4 +1,5 @@
 {
     "e": "scripts.echo::echo",
-    "r": "scripts.string.repeat::repeat"
+    "r": "scripts.string.repeat::repeat",
+    "f": "scripts.string.regex::find"
 }
