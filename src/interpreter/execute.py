@@ -11,7 +11,7 @@ def execute(chunks: list[Chunk]) -> None:
         func: Callable[..., Any] = load_by_name(name=chunk.name)
         match chunk.link:
             case '|':
-                result = func(*chunk.args)
+                result = func(result, *chunk.args)
             case '?':
                 result = list(map(func, result))
 
