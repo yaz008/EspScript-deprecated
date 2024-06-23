@@ -4,7 +4,6 @@
     "lst": "collections.cast::cast_to_list",
     "set": "collections.cast::cast_to_set",
     "ch": "collections.choose::random_choice",
-    "chs": "collections.choose::random_choices",
     "b": "core.cast::cast_to_bool",
     "i": "core.cast::cast_to_int",
     "fl": "core.cast::cast_to_float",

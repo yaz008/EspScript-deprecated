@@ -87,16 +87,6 @@ And it wokrs! Magic...
 
 To learn more magical stuff and language features check out the [Manual](doc/MAN.md) or read [Documentation](doc/DOC.md)
 
-## Customization
-
-EspScript is designed to be customizable and expandable. You can:
-
-- Rename any built-in command
-
-- Add your own commands to EspScript
-
-Check out [Documentation](doc/DOC.md) for details
-
 ## License
 
 EspScript is an open-source software distributed under the [MIT License](LICENSE.txt)
