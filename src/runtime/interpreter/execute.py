@@ -16,6 +16,6 @@ def execute(chunks: list[Chunk]) -> None:
             case '?':
                 result = list(map(func, result))
             case '&':
-                result = reduce(func(*chunk.args), result)
+                result = reduce(func, result)
 
     return list(result) if isinstance(result, map) else result
