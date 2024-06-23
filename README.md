@@ -27,7 +27,7 @@ First, clone the repository
 git clone https://github.com/yaz008/EspScript
 ```
 
-Then create python virtual environment, activate it and run
+Then create Python 3.12 virtual environment, activate it and run
 
 ```sh
 pip install -r requirements.txt
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 Copy `espscript.yml` file to the Espanso `matches` directory
 
-Replace `[python]` with a path to the python interpreter and `[espscript-main]` with a path to the `src/main.py` file
+Replace `[python]` with a path to the Python interpreter and `[espscript-main]` with a path to the `src/main.py` file
 
 **Note:** Using a different Python interpreter than the one within the virtual environment can lead to unexpected errors
 
@@ -79,13 +79,23 @@ Hm, It doesn't do anything... This is because Espanso has a limit of 30 characte
 
 ### Clipboard
 
-But what if we want a long input anyway? Here comes the Clipboard. The `r` and almost any other command in EspScript takes Clipboard data as stdin by default
+But what if we want a long input anyway? Here comes the clipboard. The `r` and almost any other command in EspScript takes clipboard data as stdin by default
 
 Simply copy the string from the previous example and type `!r 10 ' | ';`
 
 And it wokrs! Magic... 
 
-To learn more magical stuff and language features check out the [Manual](doc/manual/MAN.md) or read [Documentation](doc/DOC.md)
+To learn more magical stuff and language features check out the [Manual](doc/MAN.md) or read [Documentation](doc/DOC.md)
+
+## Customization
+
+EspScript is designed to be customizable and expandable. You can:
+
+- Rename any built-in command
+
+- Add your own commands to EspScript
+
+Check out [Documentation](doc/DOC.md) for details
 
 ## License
 
