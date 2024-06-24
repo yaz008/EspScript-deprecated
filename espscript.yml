@@ -1,5 +1,5 @@
 matches:
-  - regex: "!(?P<cmd>.*);"
+  - regex: "!(?P<cmd>[^ !\\?].*[^\\\\]);"
     replace: "{{result}}"
     vars:
       - name: result

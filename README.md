@@ -90,5 +90,3 @@ To learn more magical stuff and language features check out the [Manual](doc/MAN
 ## License
 
 EspScript is an open-source software distributed under the [MIT License](LICENSE.txt)
-
-<img src="assets/logo.jpg" alt="Logo" style="height: 400px;"/>
