@@ -1,6 +1,3 @@
-from json import load
-from sys import path
+from modules.filemanip import load_json
 
-regex: str = f'{path[0]}\\modules\\regex\\patterns.json'
-with open(file=regex, mode='r', encoding='UTF-8') as RegexFile:
-    patterns: dict[str, str] = load(RegexFile)
+patterns: dict[str, str] = load_json(relative_path='modules\\regex\\patterns.json')

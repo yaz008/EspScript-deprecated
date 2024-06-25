@@ -90,3 +90,25 @@ The language includes 3 types of tokens
   - **Map link (?):** Map link appies the next function to every element of the result
 
   - **Reduce link (&):** Reduce link calls the `reduce` function with the next function as a reducer and the previous result as a sequence
+
+## Standard Library
+
+The runtime and packages both rely on standard library
+
+Standard library includes 2 modules: filemanip and regex
+
+### Filemanip
+
+Filemanip includes 2 functions:
+
+- **load_json:** takes a path relative to `./src` folder and returns a Python object constructed from the file
+
+- **write:** takes an absolute path to the file and content to the file, writes content to the file
+
+### Regex
+
+Regex includes 2 files:
+
+- **patters.json:** a json file with predefined regex patterns
+
+- **patterns.py:** python file with `patterns.json` loaded into `patterns` dictionary
