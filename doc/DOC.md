@@ -6,6 +6,7 @@
 * [Engine](#engine)
   * [Espanso](#espanso)
   * [Runtime](#runtime)
+* [Grammar](#grammar)
 
 ## Introduction
 
@@ -44,3 +45,27 @@ Parser divides a given string into chunks. A chunk is a *link*, a *command name*
   - A string of non-space characters
 
   - A string of any characters (including spaces) surrounded by `'`
+
+## Grammar
+
+EspScript grammar is pretty simple
+
+```grammar
+Script -> Command | Command Commands
+Commands -> link Command | epsilon
+Command -> name Args
+Args -> arg Args | epsilon
+```
+
+The terminals in the grammar above are defined as follows
+
+```grammar
+Link -> '|' | '?' | '&'
+Name -> '[\w]' Name | '[\w]'
+Arg -> SimpleArg | QuotedArg
+SimpleArg -> '[\w]' SimpleArg | '[\w]'
+QuotedArg -> '\'' QuotedArgMiddle '\''
+QuotedArgMiddle -> '[^\']' QuotedArgMiddle | epsilon
+```
+
+**Note:** `epsilon` denotes an empty string

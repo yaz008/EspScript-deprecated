@@ -15,7 +15,7 @@ It enables the execution of predefined commands within text fields, substituting
 
 You simply type a command using EspScript syntax in any place *(Browser, Notepad, VS Code, Word, etc.)*, and it will be replaced with the result
 
-For example, `!rd int 0:2**64;` will be replaced with a random integer from 0 to 2^64
+For example, `!e 'Hello, World!';` will be replaced with `'Hello, World!'`
 
 **Note:** EspScript relies on [Espanso](https://espanso.org/) text expansion engine to recognize commands, so it must be installed on your computer in order for EspScript to work
 
@@ -61,27 +61,27 @@ Now, when you installed EspScript successfully, it's time to type your first com
 
 Every command begins with `!` followed by the name, a list of arguments and `;`. The simplest command is `echo`, it outputs whatever it gets as an argument. In EspScript `echo` is shortened to just `e`
 
-Try some code: navigate to any place where you can insert text and type `!e 123;`. You should get `123` back.
+Try some code: navigate to any place where you can insert text and type `!e 123;`. You should get `123` back
 
 Now let's try the classic! To input a string, enclose it in single quotes: `!e 'Hello, World!';`. Now you officially know one more programming language!
 
 ### Pipelines
 
-The `echo` command is not completely useless as it might look at the first glance. It is essential for making pipelines. Here is how if works, but first wee need some other command to chain is with `echo` - the `repeat`: it takes an integer as an argument an outputs its `stdin` that many times.
+The `echo` command is not completely useless as it might look at the first glance. It is essential for making pipelines. Here is how if works, but first wee need some other command to chain is with `echo` - the `repeat`: it takes an integer as an argument an outputs its `stdin` that many times
 
-To chain two commands type `|` between them. Try this: `!e repeat | r 10;`
+To chain two commands type `|` between them. Try this: `!e repeat | rp 10;`
 
-The result is a bit ugly. To fix this, pass `' | '`  as a second argument: `!e repeat | r 10 ' | ';`
+The result is a bit ugly. To fix this, pass `' | '`  as a second argument: `!e repeat | rp 10 ' | ';`
 
-Now let's try it with a longer string: `!e 'It is a very long string' | r 10 ' | ';`
+Now let's try it with a longer string: `!e 'It is a very long string' | rp 10 ' | ';`
 
-Hm, It doesn't do anything... This is because Espanso has a limit of 30 characters for a regex match, and we have exeeded this limit.
+Hm, It doesn't do anything... This is because Espanso has a limit of 30 characters for a regex match, and we have exeeded this limit
 
 ### Clipboard
 
 But what if we want a long input anyway? Here comes the clipboard. The `r` and almost any other command in EspScript takes clipboard data as stdin by default
 
-Simply copy the string from the previous example and type `!r 10 ' | ';`
+Simply copy the string from the previous example and type `!rp 10 ' | ';`
 
 And it wokrs! Magic... 
 
