@@ -1,0 +1,1 @@
+from modules.filemanip.write import write

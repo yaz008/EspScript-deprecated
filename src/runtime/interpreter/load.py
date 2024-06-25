@@ -10,5 +10,5 @@ with open(file=config, mode='r', encoding='UTF-8') as ConfigFile:
 
 def load_by_name(name: str) -> Callable[..., Any]:
     path, funcname = lookup[name].split(sep='::')
-    module: ModuleType = import_module(f'modules.{path}')
+    module: ModuleType = import_module(f'packages.{path}')
     return getattr(module, funcname)
