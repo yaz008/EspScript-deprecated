@@ -15,7 +15,7 @@ It enables the execution of predefined commands within text fields, substituting
 
 You simply type a command using EspScript syntax in any place *(Browser, Notepad, VS Code, Word, etc.)*, and it will be replaced with the result
 
-For example, `!e 'Hello, World!';` will be replaced with `'Hello, World!'`
+For example, `!e 'Hello, World!';` will be replaced with `Hello, World!`
 
 **Note:** EspScript relies on [Espanso](https://espanso.org/) text expansion engine to recognize commands, so it must be installed on your computer in order for EspScript to work
 

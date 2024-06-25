@@ -7,6 +7,7 @@
   * [Espanso](#espanso)
   * [Runtime](#runtime)
 * [Grammar](#grammar)
+* [Semantics](#sematics)
 
 ## Introduction
 
@@ -69,3 +70,23 @@ QuotedArgMiddle -> '[^\']' QuotedArgMiddle | epsilon
 ```
 
 **Note:** `epsilon` denotes an empty string
+
+## Sematics
+
+The language includes 3 types of tokens
+
+- **Command names:** Command names are resolved dynamically at runtime. This is the first step of chinks execution. If name is not found, the execution terminates with an error
+
+- **Arguments:** In EspScript there are 2 types of arguments:
+
+  - **Fixed arguments:** Fixed arguments are quite similar to the command names but they are not resolved dynamically when a script runs. Instead a table of all valid argument values is loaded when corresponding module is imported
+
+  - **Arbitrary arguments:** Their value is being passed into a function as-is
+
+- **Links:** Links are operators. They define how the next function will be applied to the result of a previous one in a pipeline. There are 3 types of links:
+
+  - **Pipe link (|):** Pipe link derictly applies the next function
+
+  - **Map link (?):** Map link appies the next function to every element of the result
+
+  - **Reduce link (&):** Reduce link calls the `reduce` function with the next function as a reducer and the previous result as a sequence
