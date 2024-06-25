@@ -8,6 +8,18 @@
   * [Runtime](#runtime)
 * [Grammar](#grammar)
 * [Semantics](#sematics)
+  * [Filemanip](#filemanip)
+  * [Regex](#regex)
+* [Standard Library](#standard-library)
+  * [Filemanip](#filemanip)
+  * [Regex](#regex)
+* [Packages](#packages)
+  * [Conversion](#conversion)
+  * [Core](#core)
+  * [Math](#math)
+  * [Rand](#rand)
+  * [Run](#run)
+  * [String](#string)
 
 ## Introduction
 
@@ -111,4 +123,104 @@ Regex includes 2 files:
 
 - **patters.json:** a json file with predefined regex patterns
 
-- **patterns.py:** python file with `patterns.json` loaded into `patterns` dictionary
+- **patterns.py:** Python file with `patterns.json` loaded into `patterns` dictionary
+
+#### Patterns
+
+- **w:** words
+- **n:** numbers
+- **e:** emails
+- **p:** phones
+- **u:** urls
+- **id:** valid C-style identifiers
+- **mac:** mac adresses
+- **uuid:** UUID version 4
+- **ver:** semantic versions
+- **ip:** IPv4
+- **#:** hashtags
+
+## Packages
+
+Packages provide the interface and declare polymorfic functions used in scripts
+
+### Conversion
+
+Provides interface for casting standard types
+
+- **lst:** convert stdin iterable to `list`
+- **set:** convert stdin iterable to `set`
+
+- **b:** convert stdin to `bool`
+- **i:** convert stdin to `int`
+- **fl:** convert stdin to `float`
+- **str:** convert stdin to `string`
+
+### Core
+
+Core package includes echo, globals and predicates
+
+#### Echo
+
+Echo includes the `echo` function
+
+- **e:** returns it's arguments separated by spaces
+
+#### Global
+
+Global includes length, minimum and maximum
+
+- **l:** returns number of elements in stdin
+- **min:** return the smallest element in stdin
+- **max:** return the largest element in stdin
+
+#### Predicates
+
+Predicates includes binary predicates add and mul
+
+- **+:** returns the sum of 2 numbers
+- ***:** returns the product of 2 numbers
+
+### Math
+
+Math package includes statistics
+
+#### Statistics
+
+Statistics include 3 functions
+
+- **av:** returns mean of the stdin iterable
+- **md:** returns median of the stdin iterable
+- **var:** returns variance of the stdin iterable
+
+### Rand
+
+Rand package includes choice
+
+#### Choice
+
+Choice includes one polymorfic function
+
+- **ch:** polymorfic random choice function:
+  - **no arguments:** returns a random element of stdin sequence
+  - **number:** returns a list of `number` elements of stdin sequence
+
+### Run
+
+Run package allows to run code. It includes Python
+
+#### Python
+
+Python includes 2 functions
+
+- **ev:** evaluates an stdin expression, allows names from Python `math` module
+- **run:** runs Python code from stdin *(requires python in the PATH)*
+
+### String
+
+String package includes various functions for string manipulations: finding, counting and substituting patterns
+
+- **count:** return number of matches for a given pattern
+- **find:** returns a list of matches for a given pattern
+- **repeat:** returns stdin repeated `number` of times. Inserts a separator inbetween if specified
+- **replace:** replaces an `old` string with `new`
+- **substitute:** substitutes `pattern` with a `replacement` string
