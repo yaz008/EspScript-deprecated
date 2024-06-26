@@ -1,5 +1,7 @@
 # Documentation
 
+**Warning!** This documentation is for an outdated version of EspScript (v0.1.0-alpha) and is no longer up to date
+
 ## Table Of Contents
 
 * [Intruduction](#introduction)
