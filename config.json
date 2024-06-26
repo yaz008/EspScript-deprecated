@@ -5,18 +5,26 @@
     "i": "coconversionre.cast::cast_to_int",
     "fl": "conversion.cast::cast_to_float",
     "str": "conversion.cast::cast_to_string",
+
     "av": "math.statistics::mean",
     "md": "math.statistics::median",
     "var": "math.statistics::variance",
+
     "ch": "rand.choice::random_choice",
+
     "run": "run.python::run_code",
     "ev": "run.python::evaluate",
+
     "e": "core.echo::echo",
     "l": "core.global::length",
     "min": "core.global::minimum",
     "max": "core.global::maximum",
     "+": "core.predicates::add",
     "*": "core.predicates::mul",
+    "<": "core.predicates::less",
+    ">": "core.predicates::greater",
+    "st": "core.sort::sort",
+
     "f": "string.find::find",
     "c": "string.count::count",
     "s": "string.substitute::substitute",
