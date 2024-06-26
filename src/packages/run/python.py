@@ -8,7 +8,7 @@ def evaluate(stdin: str) -> Any:
     return eval(stdin, math.__dict__)
 
 def run_code(stdin: str, *args: str) -> str:
-    tmp: str = f'{'\\'.join(path[0].split(sep='\\')[:-1])}\\temp\\tmp.py'
+    tmp: str = f'{path[0]}\\temp\\tmp.py'
     write(file=tmp, content=stdin)
     result: CompletedProcess = run(f'python {tmp} {' '.join([f'\"{arg}\"' for arg in args])}',
                                    capture_output=True,
