@@ -25,6 +25,8 @@
     ">": "core.predicates::greater",
     "st": "core.sort::sort",
 
+    "git": "git.commit::commit",
+
     "pp": "string.path::insert_path",
     "f": "string.find::find",
     "c": "string.count::count",
