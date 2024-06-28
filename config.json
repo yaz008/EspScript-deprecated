@@ -25,6 +25,7 @@
     ">": "core.predicates::greater",
     "st": "core.sort::sort",
 
+    "pp": "string.path::insert_path",
     "f": "string.find::find",
     "c": "string.count::count",
     "s": "string.substitute::substitute",
