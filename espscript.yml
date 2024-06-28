@@ -1,3 +1,19 @@
+global_vars:
+  - name: python
+    type: echo
+    params:
+      echo: "[python]"
+
+  - name: espscript
+    type: echo
+    params:
+      echo: "[espscript-main]"
+
+  - name: shell
+    type: echo
+    params:
+      echo: "powershell"
+
 matches:
   - regex: "!(?P<cmd>[^ !\\?].*[^\\\\]);"
     replace: "{{result}}"
@@ -5,5 +21,15 @@ matches:
       - name: result
         type: shell
         params:
-          cmd: "[python] [espscript-main] \"$env:ESPANSO_CMD\""
+          cmd: "{{python}} {{espscript}} \"$env:ESPANSO_CMD\""
+          shell: powershell
+
+  - regex: "@(?P<cmd>[^ !\\?].*[^\\\\]);"
+    replace: "{{result}}"
+    force_mode: keys
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: "{{python}} {{espscript}} \"$env:ESPANSO_CMD\""
           shell: powershell
